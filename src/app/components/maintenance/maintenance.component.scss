@@ -1,0 +1,230 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+  padding: 1.5rem;
+}
+
+.maintenance-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 520px;
+  animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0) 70%);
+    pointer-events: none;
+  }
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.logo-wrapper {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.rotating-ring {
+  transform-origin: center;
+  animation: rotate 15s linear infinite;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-name {
+  font-size: 1.75rem;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  color: #FFFFFF;
+  line-height: 1.1;
+}
+
+.brand-sub {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.45em;
+  color: #E63946;
+  margin-top: 0.25rem;
+  padding-left: 0.45em; // Offset letter-spacing to center text perfectly
+}
+
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(230, 57, 70, 0.1);
+  border: 1px solid rgba(230, 57, 70, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #E63946;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.7);
+  animation: pulse 1.8s infinite;
+}
+
+.status-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #E63946;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.message {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2.5rem;
+  max-width: 380px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.spinner-container {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 44px;
+  height: 44px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-top-color: #E63946;
+  border-radius: 50%;
+  animation: rotate 1s infinite cubic-bezier(0.5, 0, 0.5, 1);
+  box-shadow: 0 0 15px rgba(230, 57, 70, 0.2);
+  position: relative;
+}
+
+.footer-note {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.05em;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
+// Animations
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(230, 57, 70, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Media Queries for Mobile Responsiveness (mobile-first approach)
+@media (max-width: 480px) {
+  :host {
+    padding: 1rem;
+  }
+  
+  .card {
+    padding: 2.5rem 1.25rem;
+    border-radius: 20px;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.85rem;
+  }
+
+  .message {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  
+  .logo-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+}
