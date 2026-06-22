@@ -56,11 +56,28 @@
   width: 90px;
   height: 90px;
   margin-bottom: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
+.logo-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  z-index: 2;
+  mix-blend-mode: screen; /* Blends black background of image perfectly */
+  border-radius: 50%;
+}
+
+.logo-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 .rotating-ring {
@@ -76,7 +93,7 @@
 
 .brand-name {
   font-size: 1.75rem;
-  font-weight: 900;
+  font-weight: normal;
   letter-spacing: 0.25em;
   color: #FFFFFF;
   line-height: 1.1;
@@ -84,7 +101,7 @@
 
 .brand-sub {
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: normal;
   letter-spacing: 0.45em;
   color: #E63946;
   margin-top: 0.25rem;
@@ -113,14 +130,14 @@
 
 .status-text {
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: normal;
   letter-spacing: 0.15em;
   color: #E63946;
 }
 
 .title {
   font-size: 2.25rem;
-  font-weight: 700;
+  font-weight: normal;
   letter-spacing: -0.02em;
   color: #FFFFFF;
   margin-bottom: 1rem;
@@ -132,7 +149,7 @@
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 2.5rem;
   max-width: 380px;
-  font-weight: 300;
+  font-weight: normal;
   line-height: 1.6;
 }
 
