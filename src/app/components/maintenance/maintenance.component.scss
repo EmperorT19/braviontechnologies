@@ -85,29 +85,6 @@
   animation: rotate 15s linear infinite;
 }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.brand-name {
-  font-size: 1.75rem;
-  font-weight: normal;
-  letter-spacing: 0.25em;
-  color: #FFFFFF;
-  line-height: 1.1;
-}
-
-.brand-sub {
-  font-size: 0.75rem;
-  font-weight: normal;
-  letter-spacing: 0.45em;
-  color: #E63946;
-  margin-top: 0.25rem;
-  padding-left: 0.45em; // Offset letter-spacing to center text perfectly
-}
-
 .status-indicator {
   display: inline-flex;
   align-items: center;
@@ -221,14 +198,10 @@
   :host {
     padding: 1rem;
   }
-  
+
   .card {
     padding: 2.5rem 1.25rem;
     border-radius: 20px;
-  }
-
-  .brand-name {
-    font-size: 1.5rem;
   }
 
   .title {
