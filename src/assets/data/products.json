@@ -1,0 +1,50 @@
+[
+  {
+    "id": "nw-001",
+    "category": "Networking Equipment",
+    "sku": "NET-RT-01X",
+    "name": "Enterprise Edge Router X1",
+    "price": 45000,
+    "currency": "KES",
+    "stock": "in_stock",
+    "image": "https://placehold.co/400x300/000000/FF0000?text=ROUTER+X1",
+    "specs": {
+      "Ports": "48x 1GbE, 4x 10GbE SFP+",
+      "Throughput": "120 Gbps",
+      "Form Factor": "1U Rackmount"
+    },
+    "description": "High-performance enterprise router designed for resilient network topologies."
+  },
+  {
+    "id": "tc-001",
+    "category": "Toners & Cartridges",
+    "sku": "TNR-MR-89",
+    "name": "Master Roll Toner Cartridge - Black",
+    "price": 12500,
+    "currency": "KES",
+    "stock": "low_stock",
+    "image": "https://placehold.co/400x300/000000/FF0000?text=TONER+MR-89",
+    "specs": {
+      "Yield": "15,000 pages",
+      "Color": "Black",
+      "Compatibility": "Bravion Pro series, standard ISO printers"
+    },
+    "description": "Industrial grade master roll toner for high volume printing."
+  },
+  {
+    "id": "om-001",
+    "category": "Office Machine Consumables",
+    "sku": "OMC-DRM-22",
+    "name": "Heavy Duty Imaging Drum",
+    "price": 8500,
+    "currency": "KES",
+    "stock": "out_of_stock",
+    "image": "https://placehold.co/400x300/000000/FF0000?text=IMAGING+DRUM",
+    "specs": {
+      "Lifespan": "100,000 prints",
+      "Material": "OPC",
+      "Type": "Replacement Part"
+    },
+    "description": "OEM replacement imaging drum for commercial office machines."
+  }
+]

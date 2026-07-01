@@ -1,0 +1,127 @@
+<div class="space-y-12 animate-fade-in">
+  <!-- Breadcrumb -->
+  <div class="page-breadcrumb">
+    <a routerLink="/" class="breadcrumb-back-btn">
+      <span>←</span> HOME
+    </a>
+    <span class="text-neutral-600">/</span>
+    <span>02 / SERVICES & SOLUTIONS</span>
+  </div>
+
+  <!-- Hero Header -->
+  <header class="space-y-3">
+    <span class="section-label">CAPABILITIES</span>
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight uppercase">OUR SERVICES</h1>
+    <p class="text-gray-400 max-w-2xl text-sm leading-relaxed">
+      Comprehensive solutions spanning advanced computing, cybersecurity, software engineering, strategic communications, and corporate branding. Choose a category below to explore.
+    </p>
+  </header>
+
+  <!-- Category Filters -->
+  <div class="corporate-card p-4 overflow-x-auto scrollbar-thin">
+    <div class="flex gap-2 min-w-max">
+      <button 
+        *ngFor="let cat of categories" 
+        (click)="setCategory(cat)"
+        [class]="selectedCategory === cat ? 'px-4 py-2 text-xs font-mono font-bold rounded-lg bg-[#e62e2e] text-white border border-[#e62e2e]' : 'px-4 py-2 text-xs font-mono font-medium rounded-lg bg-neutral-900/60 text-gray-400 border border-neutral-800 hover:text-white hover:border-neutral-700 transition-all duration-300'"
+      >
+        {{ cat }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Services Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div 
+      *ngFor="let srv of filteredServices" 
+      class="corporate-card flex flex-col justify-between overflow-hidden service-card group"
+    >
+      <!-- Card Media Header -->
+      <div class="relative w-full h-48 overflow-hidden border-b border-neutral-900/50 bg-neutral-950">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0b0f17] via-transparent to-transparent z-10 opacity-60"></div>
+        <img 
+          [src]="srv.image" 
+          [alt]="srv.title" 
+          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+          loading="lazy"
+        />
+        <span class="absolute bottom-3 left-3 z-20 text-[9px] font-mono bg-[#e62e2e] text-white px-2.5 py-1 rounded font-semibold uppercase tracking-widest">
+          {{ srv.category }}
+        </span>
+      </div>
+
+      <!-- Card Details Content -->
+      <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+        <div class="space-y-4">
+          <h2 class="text-xl font-extrabold text-white tracking-tight uppercase group-hover:text-[#e62e2e] transition-colors duration-300">
+            {{ srv.title }}
+          </h2>
+
+          <!-- Tagline Quote -->
+          <div class="pl-3 border-l-2 border-[#e62e2e] py-1 bg-neutral-900/30 rounded-r-md">
+            <p class="text-xs font-medium text-gray-200 italic leading-relaxed">
+              &ldquo;{{ srv.tagline }}&rdquo;
+            </p>
+          </div>
+
+          <!-- Description -->
+          <p class="text-xs text-gray-400 leading-relaxed font-medium">
+            {{ srv.description }}
+          </p>
+
+          <!-- Turnaround SLA Info (if available) -->
+          <div *ngIf="srv.turnaround" class="space-y-1.5 pt-2">
+            <span class="block text-[9px] font-mono text-gray-500 uppercase tracking-widest">SLA RESPONSE TIMES</span>
+            <div class="grid grid-cols-2 gap-2 text-[10px] font-mono">
+              <div *ngFor="let turn of srv.turnaround | keyvalue" class="bg-neutral-900/80 border border-neutral-800/40 p-2 rounded flex flex-col justify-center">
+                <span class="text-gray-500 capitalize">{{ turn.key.replace('-', ' ') }}</span>
+                <span class="text-white font-bold">{{ turn.value }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Features (if available) -->
+          <div *ngIf="srv.features" class="space-y-2 pt-2">
+            <span class="block text-[9px] font-mono text-gray-500 uppercase tracking-widest">TECHNICAL CAPABILITIES</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div *ngFor="let feat of srv.features" class="flex items-start gap-1.5">
+                <span class="text-[#e62e2e] text-[8px] mt-1">▪</span>
+                <span class="text-[10px] text-gray-400 font-medium">{{ feat }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Dispatch CTA -->
+        <div class="pt-5 border-t border-neutral-900 flex justify-between items-center gap-4">
+          <span class="text-[10px] text-gray-500 font-mono tracking-tighter">Bravion Enterprise SLA Available</span>
+          <a 
+            [routerLink]="['/quote']" 
+            [queryParams]="{ item: srv.title }" 
+            class="px-4 py-2 text-center rounded-lg bg-neutral-900 border border-neutral-800 text-xs font-semibold text-white hover:bg-[#e62e2e] hover:border-[#e62e2e] hover:shadow-lg hover:shadow-[#e62e2e]/10 transition-all duration-300"
+          >
+            INQUIRE NOW
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom CTA section -->
+  <div class="corporate-card p-6 md:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mt-12 bg-gradient-to-r from-neutral-950 to-neutral-900">
+    <div class="space-y-2">
+      <span class="text-[10px] font-mono text-[#e62e2e] tracking-widest uppercase block font-bold">STRATEGIC PARTNERSHIPS</span>
+      <h3 class="text-lg font-bold text-white uppercase">NEED A CUSTOM SLA OR DEDICATED TEAM?</h3>
+      <p class="text-xs text-gray-400 max-w-xl font-medium">
+        We configure custom service parameters, key performance indicators, and dedicated project team dispatch models for enterprise scale operations.
+      </p>
+    </div>
+    <a 
+      routerLink="/quote" 
+      [queryParams]="{ item: 'Custom Partnership SLA' }"
+      class="w-full md:w-auto text-center btn-primary text-xs whitespace-nowrap"
+    >
+      REQUEST STRATEGIC SLA
+    </a>
+  </div>
+</div>
