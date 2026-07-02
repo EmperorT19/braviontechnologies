@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
           <span>←</span> HOME
         </a>
         <span class="text-neutral-600">/</span>
-        <span>04 / CONTACT & SUPPORT</span>
+        <span>CONTACT & SUPPORT</span>
       </div>
 
       <!-- Hero Header -->
@@ -45,7 +45,7 @@ import { FormsModule } from '@angular/forms';
               
               <div class="space-y-1">
                 <span class="text-gray-500 block">OPERATIONS DESK EMAIL</span>
-                <span class="text-[#e62e2e] font-semibold text-sm">operations&#64;braviontech.co.ke</span>
+                <span class="text-[#e62e2e] font-semibold text-sm">tech&#64;braviongroup.co.ke</span>
               </div>
 
               <div class="space-y-1 border-t border-neutral-900 pt-4">
@@ -54,14 +54,7 @@ import { FormsModule } from '@angular/forms';
                 <span class="text-gray-400 block font-sans">Opposite Carrefour Supermarket, Rose Avenue Mall, Next to Listers Car Wash</span>
               </div>
 
-              <div class="space-y-1 border-t border-neutral-900 pt-4 text-[10px] text-gray-500">
-                <p class="font-bold text-gray-400 uppercase">SLA RESPONSIVENESS INDEX:</p>
-                <ul class="space-y-1 mt-1">
-                  <li>• CRITICAL INCIDENT: Under 1 Hour</li>
-                  <li>• PRIORITY SUPPORT: Under 4 Hours</li>
-                  <li>• ROUTINE REQUEST: Under 24 Hours</li>
-                </ul>
-              </div>
+
             </div>
           </div>
 

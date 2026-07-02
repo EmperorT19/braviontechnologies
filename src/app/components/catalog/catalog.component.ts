@@ -28,7 +28,7 @@ interface HardwareItem {
           <span>←</span> HOME
         </a>
         <span class="text-neutral-600">/</span>
-        <span>01 / HARDWARE CATALOG</span>
+        <span>HARDWARE CATALOG</span>
       </div>
 
       <!-- Hero Header -->
@@ -168,7 +168,7 @@ export class CatalogComponent implements OnInit {
   items: HardwareItem[] = [];
   filteredItems: HardwareItem[] = [];
   
-  categories: string[] = ['All', 'Networking Equipment', 'Toners & Cartridges', 'Office Equipment', 'Power & Backup Systems', 'Scanning & POS Hardware', 'Server & Storage Systems', 'CCTV & Security Hardware', 'Audio-Visual & Conference Systems', 'Telecommunications & VoIP', 'Cabling & Infrastructure', 'Cybersecurity Hardware', 'Access Control & Biometrics', 'Fiber Splicing & Testing', 'Queue Management Hardware', 'IoT & Smart Building Hardware'];
+  categories: string[] = ['All', 'Networking Equipment', 'Toners & Cartridges', 'Office Equipment', 'Power & Backup Systems', 'Scanning & POS Hardware', 'Server & Storage Systems', 'CCTV & Security Hardware', 'Audio-Visual & Conference Systems', 'Laptops & Workstations', 'Cabling & Infrastructure', 'Cybersecurity Hardware', 'Access Control & Biometrics', 'Fiber Splicing & Testing', 'Queue Management Hardware', 'IoT & Smart Building Hardware'];
   selectedCategory = 'All';
   
   allPrinters: string[] = [];
