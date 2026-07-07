@@ -69,16 +69,7 @@
             {{ srv.description }}
           </p>
 
-          <!-- Turnaround SLA Info (if available) -->
-          <div *ngIf="srv.turnaround" class="space-y-1.5 pt-2">
-            <span class="block text-[9px] font-mono text-gray-500 uppercase tracking-widest">SLA RESPONSE TIMES</span>
-            <div class="grid grid-cols-2 gap-2 text-[10px] font-mono">
-              <div *ngFor="let turn of srv.turnaround | keyvalue" class="bg-neutral-900/80 border border-neutral-800/40 p-2 rounded flex flex-col justify-center">
-                <span class="text-gray-500 capitalize">{{ turn.key.replace('-', ' ') }}</span>
-                <span class="text-white font-bold">{{ turn.value }}</span>
-              </div>
-            </div>
-          </div>
+
 
           <!-- Service Features (if available) -->
           <div *ngIf="srv.features" class="space-y-2 pt-2">

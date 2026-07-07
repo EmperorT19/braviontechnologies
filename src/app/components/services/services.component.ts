@@ -10,7 +10,6 @@ export interface ServiceItem {
   description: string;
   tagline: string;
   features?: string[];
-  turnaround?: { [key: string]: string };
 }
 
 @Component({
@@ -46,12 +45,7 @@ export class ServicesComponent implements OnInit {
         "Thermal & Night-Vision configuration",
         "Motion detection & notification zoning",
         "Secure central server storage setup"
-      ],
-      turnaround: {
-        "assessment": "Same-Day",
-        "proposal": "Next-Day",
-        "installation": "2-3 Days"
-      }
+      ]
     },
     {
       id: 'srv-access',
@@ -65,12 +59,7 @@ export class ServicesComponent implements OnInit {
         "RFID Smart Card lock integration",
         "Turnstiles & Speed-gate installations",
         "Real-time clocking and HR system sync"
-      ],
-      turnaround: {
-        "survey": "Same-Day",
-        "proposal": "Next-Day",
-        "deployment": "3-5 Days"
-      }
+      ]
     },
     {
       id: 'srv-office',
@@ -84,12 +73,7 @@ export class ServicesComponent implements OnInit {
         "Firmware updates & network scanning setup",
         "Diagnostic checks & hardware troubleshooting",
         "Toner/ink level automated alerts configuration"
-      ],
-      turnaround: {
-        "software-jams": "Same-Day",
-        "preventative-maintenance": "Scheduled Monthly",
-        "parts-replacement": "Next-Day"
-      }
+      ]
     },
     {
       id: 'srv-procurement',
@@ -103,11 +87,7 @@ export class ServicesComponent implements OnInit {
         "Compliance audit documentation",
         "Direct manufacturer warranty channels",
         "Dedicated account managers"
-      ],
-      turnaround: {
-        "tender-review": "2 Days",
-        "sla-activation": "5 Days"
-      }
+      ]
     },
 
     // New 22 Services

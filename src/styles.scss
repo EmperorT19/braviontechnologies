@@ -175,3 +175,127 @@ h1, h2, h3, h4, h5, h6 {
 .breadcrumb-back-btn:hover {
   color: var(--accent);
 }
+
+/* High-tech NOC Terminal & SLA Animations */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    box-shadow: 0 0 10px rgba(230, 46, 46, 0.2);
+  }
+  50% {
+    opacity: 0.9;
+    box-shadow: 0 0 25px rgba(230, 46, 46, 0.6);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes scanEffect {
+  0% { top: 0%; }
+  50% { top: 100%; }
+  100% { top: 0%; }
+}
+
+@keyframes gridMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 30px 30px; }
+}
+
+.noc-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.scanline-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(230, 46, 46, 0) 0%,
+    rgba(230, 46, 46, 0.08) 50%,
+    rgba(230, 46, 46, 0) 100%
+  );
+  animation: scanline 6s linear infinite;
+  pointer-events: none;
+}
+
+.glow-active-red {
+  animation: pulseGlow 2s infinite;
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+.scanner-beam {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  box-shadow: 0 0 15px var(--accent);
+  position: absolute;
+  left: 0;
+  right: 0;
+  animation: scanEffect 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.blueprint-bg {
+  background-image: 
+    linear-gradient(rgba(230, 46, 46, 0.03) 1px, transparent 1px), 
+    linear-gradient(90deg, rgba(230, 46, 46, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: gridMove 20s linear infinite;
+}
+
+/* Premium Card hover gradient borders */
+.corporate-card-premium {
+  position: relative;
+  background: rgba(13, 17, 28, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.corporate-card-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(230,46,46,0.1), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: var(--transition-smooth);
+}
+
+.corporate-card-premium:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  border-color: rgba(230, 46, 46, 0.3);
+}
+
+.corporate-card-premium:hover::before {
+  background: linear-gradient(135deg, var(--accent) 0%, #ff6b4a 50%, transparent 100%);
+}
+
