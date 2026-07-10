@@ -58,24 +58,6 @@ interface HardwareItem {
             </div>
           </div>
 
-          <!-- Printer Model Filter -->
-          <div class="space-y-2 w-full lg:w-72">
-            <span class="block text-xs font-mono text-gray-500 uppercase tracking-widest">SEARCH COMPATIBILITY</span>
-            <div class="relative">
-              <select 
-                [(ngModel)]="selectedPrinter" 
-                (change)="applyFilters()" 
-                class="w-full bg-neutral-900 border border-neutral-800 text-white rounded-lg font-mono text-xs p-3 focus:outline-none focus:border-[#e62e2e] appearance-none"
-              >
-                <option value="">All Printer Models</option>
-                <option *ngFor="let printer of allPrinters" [value]="printer">{{ printer }}</option>
-              </select>
-              <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-gray-500">
-                ▼
-              </div>
-            </div>
-          </div>
-
         </div>
 
         <div class="flex justify-between items-center text-xs font-mono text-gray-500 border-t border-neutral-900 pt-4">
@@ -177,7 +159,7 @@ export class CatalogComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get<HardwareItem[]>('/hardware.json').subscribe({
+    this.http.get<HardwareItem[]>('hardware.json').subscribe({
       next: data => {
         this.items = data;
         this.extractPrinterModels();

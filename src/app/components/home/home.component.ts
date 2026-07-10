@@ -17,10 +17,6 @@ import { RouterModule } from '@angular/router';
 
         <!-- Text content -->
         <div class="lg:col-span-6 space-y-6 z-10">
-          <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#e62e2e]/10 border border-[#e62e2e]/30 rounded-full">
-            <span class="w-1.5 h-1.5 bg-[#e62e2e] rounded-full animate-ping"></span>
-            <span class="text-[10px] font-mono text-gray-300 uppercase tracking-widest">SLA-BACKED PROCUREMENT HUB</span>
-          </div>
 
           <div class="space-y-4">
             <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight uppercase leading-none">
@@ -296,7 +292,7 @@ import { RouterModule } from '@angular/router';
           <div class="corporate-card-premium flex flex-col justify-between h-full overflow-hidden group">
             <div>
               <div class="relative overflow-hidden h-40 w-full">
-                <img src="/assets/Services16.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="SLA Helpdesk & Support">
+                <img src="assets/Services16.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="SLA Helpdesk & Support">
                 <div class="absolute inset-0 bg-gradient-to-t from-[#0d111c] to-transparent opacity-60"></div>
                 <div class="absolute bottom-3 left-3 w-8 h-8 rounded-lg bg-[#e62e2e] flex items-center justify-center text-white shadow-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
@@ -381,7 +377,7 @@ import { RouterModule } from '@angular/router';
           <div class="corporate-card-premium flex flex-col justify-between h-full overflow-hidden group">
             <div>
               <div class="relative overflow-hidden h-40 w-full">
-                <img src="/assets/Services2.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="ICT Strategy & Auditing">
+                <img src="assets/Services2.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="ICT Strategy & Auditing">
                 <div class="absolute inset-0 bg-gradient-to-t from-[#0d111c] to-transparent opacity-60"></div>
                 <div class="absolute bottom-3 left-3 w-8 h-8 rounded-lg bg-[#e62e2e] flex items-center justify-center text-white shadow-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
