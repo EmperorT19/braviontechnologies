@@ -266,7 +266,23 @@ export class ServicesComponent implements OnInit {
       image: "assets/Services21.png",
       description: "We blend creative storytelling with market intelligence to breathe new life into traditional formats. From headline-grabbing print ads to jingles that echo across regions and billboards that command attention, we craft campaigns that meet audiences where they are — offline, on air, and in person.",
       tagline: "Bravion — We make old-school unforgettable."
+    },
+
+    {
+      id: 23,
+      title: "FINTECH & DIGITAL PAYMENT INTEGRATION",
+      category: "Industry Solutions",
+      image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&auto=format&fit=crop&q=60",
+      description: "Secure deployment of payment gateway integrations, mobile money (M-Pesa) API connectivity, automated invoice matching, multi-currency ledger engines, and compliance audits for enterprise transactional portals.",
+      tagline: "Frictionless transactions. Institutional-grade security.",
+      features: [
+        "M-Pesa C2B / B2C API configurations",
+        "PCI-DSS compliant gateway integrations",
+        "Automated reconciliation engine setups",
+        "Secure wallet & ledger architecture design"
+      ]
     }
+  
   ];
 
   filteredServices: ServiceItem[] = [];

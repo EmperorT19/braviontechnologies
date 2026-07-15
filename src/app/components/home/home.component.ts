@@ -417,48 +417,48 @@ import { RouterModule } from '@angular/router';
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
           <!-- Industry 1: Government & Tenders -->
-          <div class="bg-white border border-neutral-200 rounded-2xl p-6 flex flex-col justify-between h-full space-y-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+          <div class="corporate-card-premium p-6 flex flex-col justify-between h-full space-y-4">
             <div class="space-y-3">
-              <h4 class="text-sm font-mono font-bold text-neutral-900 uppercase tracking-wider border-b border-neutral-100 pb-2">
+              <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-neutral-900 pb-2">
                 Government & Public
               </h4>
-              <p class="text-xs text-neutral-600 leading-relaxed">
+              <p class="text-xs text-gray-400 leading-relaxed font-medium">
                 Custom hardware supply and security network deployments complying with national procurement and institutional tender guidelines.
               </p>
             </div>
           </div>
 
           <!-- Industry 2: Corporate & Enterprise -->
-          <div class="bg-white border border-neutral-200 rounded-2xl p-6 flex flex-col justify-between h-full space-y-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+          <div class="corporate-card-premium p-6 flex flex-col justify-between h-full space-y-4">
             <div class="space-y-3">
-              <h4 class="text-sm font-mono font-bold text-neutral-900 uppercase tracking-wider border-b border-neutral-100 pb-2">
+              <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-neutral-900 pb-2">
                 Corporate Enterprise
               </h4>
-              <p class="text-xs text-neutral-600 leading-relaxed">
+              <p class="text-xs text-gray-400 leading-relaxed font-medium">
                 Managed office printer fleets, high-density Wi-Fi networks, server room management, and 24/7 priority SLA support contracts.
               </p>
             </div>
           </div>
 
           <!-- Industry 3: Logistics & Retail -->
-          <div class="bg-white border border-neutral-200 rounded-2xl p-6 flex flex-col justify-between h-full space-y-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+          <div class="corporate-card-premium p-6 flex flex-col justify-between h-full space-y-4">
             <div class="space-y-3">
-              <h4 class="text-sm font-mono font-bold text-neutral-900 uppercase tracking-wider border-b border-neutral-100 pb-2">
+              <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-neutral-900 pb-2">
                 Logistics & Retail
               </h4>
-              <p class="text-xs text-neutral-600 leading-relaxed">
+              <p class="text-xs text-gray-400 leading-relaxed font-medium">
                 High-volume barcode scanners, thermal label printing automation, inventory software, and rugged warehouse wireless installations.
               </p>
             </div>
           </div>
 
           <!-- Industry 4: Financial & Banking -->
-          <div class="bg-white border border-neutral-200 rounded-2xl p-6 flex flex-col justify-between h-full space-y-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+          <div class="corporate-card-premium p-6 flex flex-col justify-between h-full space-y-4">
             <div class="space-y-3">
-              <h4 class="text-sm font-mono font-bold text-neutral-900 uppercase tracking-wider border-b border-neutral-100 pb-2">
+              <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-neutral-900 pb-2">
                 Financial Services
               </h4>
-              <p class="text-xs text-neutral-600 leading-relaxed">
+              <p class="text-xs text-gray-400 leading-relaxed font-medium">
                 Biometric access control gates, secure UTM firewall systems, network link redundancy, and real-time CCTV planning maps.
               </p>
             </div>

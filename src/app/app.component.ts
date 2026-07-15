@@ -1,16 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet, RouterLink, Router, NavigationEnd } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
   title = 'Bravion Technologies';
+  isMobileMenuOpen = false;
 
   constructor(private router: Router) {}
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
 
   ngOnInit() {
     if (typeof window !== 'undefined' && 'scrollRestoration' in history) {
@@ -19,6 +25,9 @@ export class AppComponent implements OnInit {
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
+        // Auto-close mobile menu on route change
+        this.isMobileMenuOpen = false;
+
         if (typeof window !== 'undefined') {
           // Immediate scroll to top
           window.scrollTo(0, 0);

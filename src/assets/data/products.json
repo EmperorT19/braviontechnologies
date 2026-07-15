@@ -7,7 +7,7 @@
     "price": 45000,
     "currency": "KES",
     "stock": "in_stock",
-    "image": "https://placehold.co/400x300/000000/FF0000?text=ROUTER+X1",
+    "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&auto=format&fit=crop&q=60",
     "specs": {
       "Ports": "48x 1GbE, 4x 10GbE SFP+",
       "Throughput": "120 Gbps",
@@ -23,7 +23,7 @@
     "price": 12500,
     "currency": "KES",
     "stock": "low_stock",
-    "image": "https://placehold.co/400x300/000000/FF0000?text=TONER+MR-89",
+    "image": "https://images.unsplash.com/photo-1626607315372-9111c1d0637f?w=600&auto=format&fit=crop&q=60",
     "specs": {
       "Yield": "15,000 pages",
       "Color": "Black",
@@ -39,7 +39,7 @@
     "price": 8500,
     "currency": "KES",
     "stock": "out_of_stock",
-    "image": "https://placehold.co/400x300/000000/FF0000?text=IMAGING+DRUM",
+    "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=600&auto=format&fit=crop&q=60",
     "specs": {
       "Lifespan": "100,000 prints",
       "Material": "OPC",

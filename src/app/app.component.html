@@ -19,15 +19,58 @@
         <a routerLink="/quote" class="hover:text-white transition-colors">Contact</a>
       </nav>
 
-      <!-- CTA -->
+      <!-- CTA & Mobile Menu Toggle -->
       <div class="flex items-center gap-4">
-        <a routerLink="/quote" class="px-4 py-2 bg-neutral-900 border border-neutral-800 text-xs font-semibold text-white rounded-lg hover:border-white transition-all">
+        <a routerLink="/quote" class="hidden sm:inline-block px-4 py-2 bg-neutral-900 border border-neutral-800 text-xs font-semibold text-white rounded-lg hover:border-white transition-all font-mono">
           SLA DISPATCH
         </a>
+        
+        <!-- Hamburger Menu Button -->
+        <button 
+          (click)="toggleMobileMenu()" 
+          class="md:hidden p-2 text-gray-400 hover:text-white focus:outline-none cursor-pointer"
+          aria-label="Toggle menu"
+        >
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path 
+              *ngIf="!isMobileMenuOpen" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              stroke-width="2" 
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+            <path 
+              *ngIf="isMobileMenuOpen" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              stroke-width="2" 
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
       </div>
 
     </div>
   </header>
+
+  <!-- Mobile Navigation Menu Drawer -->
+  <div 
+    *ngIf="isMobileMenuOpen" 
+    class="md:hidden border-b border-neutral-900 bg-[#0b0f17]/95 backdrop-blur-md sticky top-20 z-40 transition-all duration-300 animate-fade-in"
+  >
+    <nav class="flex flex-col px-6 py-6 space-y-3 font-medium text-sm text-gray-300 font-sans">
+      <a routerLink="/" class="hover:text-white py-2.5 border-b border-neutral-900/60 transition-colors">Home</a>
+      <a routerLink="/catalog" class="hover:text-white py-2.5 border-b border-neutral-900/60 transition-colors">Equipment</a>
+      <a routerLink="/services" class="hover:text-white py-2.5 border-b border-neutral-900/60 transition-colors">Services</a>
+      <a routerLink="/cctv" class="hover:text-white py-2.5 border-b border-neutral-900/60 transition-colors">Zone Map</a>
+      <a routerLink="/quote" class="hover:text-white py-2.5 border-b border-neutral-900/60 transition-colors">Contact</a>
+      <div class="pt-2 sm:hidden">
+        <a routerLink="/quote" class="block w-full px-4 py-3 bg-neutral-900 border border-neutral-800 text-xs font-semibold text-white rounded-lg text-center hover:border-white transition-all font-mono">
+          SLA DISPATCH
+        </a>
+      </div>
+    </nav>
+  </div>
 
   <!-- Main Viewport -->
   <main class="flex-1 max-w-7xl mx-auto w-full px-4 md:px-8 py-10">
@@ -72,6 +115,9 @@
     <div class="max-w-7xl mx-auto px-4 md:px-8 pt-8 border-t border-neutral-900/50 mt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-600">
       <span>© 2026 Bravion Technologies. All rights reserved.</span>
       <span class="mt-2 sm:mt-0">Enterprise Operations & Infrastructure Supply</span>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 md:px-8 pt-2 flex justify-center text-xs text-gray-600">
+      <span>Created by Bravion Technologies</span>
     </div>
   </footer>
 
