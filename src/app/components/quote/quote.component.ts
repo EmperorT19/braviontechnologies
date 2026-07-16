@@ -40,7 +40,7 @@ import { FormsModule } from '@angular/forms';
             <div class="space-y-4 text-xs font-mono">
               <div class="space-y-1">
                 <span class="text-gray-500 block">SLA DISPATCH HOTLINE</span>
-                <span class="text-white text-base font-bold">+254 700 900 000</span>
+                <span class="text-white text-base font-bold">+254 798 628 745</span>
               </div>
               
               <div class="space-y-1">
